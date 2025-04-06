@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './WeatherDetails.css';
-
+//import './WeatherDetails.css';
 
 const API_KEY = '7e7b477aec5ba9abbee9c06677a9fea5';
 
@@ -38,7 +37,6 @@ const WeatherDetails = ({ location }) => {
     .slice(0, 5);
 
   return (
-   
     <div className="weather-details">
       {dailyForecast.slice(0,5).map((day, index) => (
         <div key={index} className="forecast-card">
@@ -49,12 +47,11 @@ const WeatherDetails = ({ location }) => {
             className="weather-icon"
           />
           <p className="temp-range">
-            Min:{Math.round(day.main.temp_min)}°C / Max: {Math.round(day.main.temp_max)}°C
+            Min: {Math.round(day.main.temp_min)}°C / Max: {Math.round(day.main.temp_max)}°C
           </p>
         </div>
       ))}
     </div>
-    
   );
 };
 
